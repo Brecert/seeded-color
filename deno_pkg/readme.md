@@ -11,6 +11,6 @@ assertEquals(seededColor(46062), "#ad9200");
 
 assertEquals(
   seededColor(213021939013239301n),
-  "#7529b8"
+  "#730de5"
 );
 ```
