@@ -1,5 +1,5 @@
 {
-  "include": ["src/"],
+  "include": ["mod.ts"],
   "compilerOptions": {
     "target": "es2020",
     "module": "esnext",
@@ -10,6 +10,6 @@
     "noFallthroughCasesInSwitch": true,
     "moduleResolution": "node",
     "baseUrl": "./",
-    "outDir": "pkg"
+    "outDir": "publish"
   }
 }

@@ -1,0 +1,5 @@
+{
+  "imports": {
+    "seeded-numbers": "https://deno.land/x/seeded_numbers@1.0.3/mod.ts"
+  }
+}

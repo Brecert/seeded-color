@@ -1,37 +1,27 @@
 {
   "type": "module",
   "name": "seeded-color",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "generate a psuedorandom color from a seed",
-  "main": "pkg/index.js",
-  "types": "src/index.ts",
-  "esnext": "pkg/index.js",
-  "files": [
-    "pkg/*",
-    "src/index.ts"
-  ],
-  "repository": "https://github.com/Brecert/seeded-numbers",
-  "author": "bree",
+  "main": "publish/mod.js",
+  "module": "publish/mod.js",
+  "types": "mod.ts",
+  "exports": {
+    "import": "./publish/mod.js",
+    "default": "./publish/mod.js"
+  },
+  "repository": "https://github.com/brecert/seeded-numbers",
+  "author": "bree <me@bree.dev>",
   "license": "MIT",
   "scripts": {
-    "build": "tsc && denoify",
-    "test": "denoify && deno test ./deno",
-    "prepublishOnly": "yarn test && yarn build"
+    "build": "tsc",
+    "test": "deno test test.ts --import-map=./import_map.json",
+    "prepublishOnly": "npm run test && npm run build"
   },
   "devDependencies": {
-    "denoify": "^0.6.3",
     "typescript": "^4.1.2"
   },
   "dependencies": {
-    "seeded-numbers": "^1.0.2"
-  },
-  "denoify": {
-    "ports": {
-      "seeded-numbers": "https://raw.githubusercontent.com/Brecert/seeded-numbers/main/mod.ts"
-    },
-    "includes": [
-      "README.md",
-      "LICENSE"
-    ]
+    "seeded-numbers": "^1.0.3"
   }
 }
