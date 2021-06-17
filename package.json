@@ -15,8 +15,7 @@
   "license": "MIT",
   "scripts": {
     "build": "tsc",
-    "test": "deno test test.ts --import-map=./import_map.json",
-    "prepublishOnly": "npm run test && npm run build"
+    "test": "deno test test.ts --import-map=./import_map.json"
   },
   "devDependencies": {
     "typescript": "^4.1.2"

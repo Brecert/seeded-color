@@ -1,4 +1,5 @@
 {
-  "deno.enable": true,
-  "deno.importMap": "./import_map.json"
+  "deno.enable": false,
+  "deno.importMap": "./import_map.json",
+  "typescript.tsdk": "node_modules/typescript/lib"
 }
